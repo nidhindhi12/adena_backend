@@ -9,6 +9,11 @@ const Jwt = require('jsonwebtoken');
 const adduser = async (req, res) => {
     try {
         const user = req.body;
+        console.log("hcjhdfj", user)
+        if (!req.body || typeof req.body.password !== 'string') {
+            return res.status(400).json({ message: "❌ Password is missing or invalid." });
+        }
+
         if (!user) {
             return res.status(400).json({ status: false, data: { message: 'user is null' } });
         }
@@ -148,9 +153,9 @@ const resetpasswordlink = async (req, res) => {
 }
 const resetpassword = async (req, res) => {
     const { userId, token } = req.params;
-    
+
     const { newPassword } = req.body;
-   
+
     if (!token) {
         return res.status(400).json({ status: false, message: 'token is null' });
     }

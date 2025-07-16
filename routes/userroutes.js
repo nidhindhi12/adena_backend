@@ -7,7 +7,7 @@ const Auth = require('../middleware/authverify')
 
 
 
-router.post('/', upload.single('image'), adduser);
+router.post('/', adduser);
 router.post('/loginuser', loginuser)
 router.post('/authverify', Auth, AuthVerify)
 router.get('/readalluser', readalluser)
