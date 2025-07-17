@@ -11,6 +11,12 @@ const ocassionroutes = require('../../routes/ocassionroutes')
 const orderroutes = require('../../routes/orderroutes');
 const wishlistroutes = require('../../routes/wishlistroutes');
 const router = express.Router();
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'https://candid-sunburst-b1b6b0.netlify.app',
+  credentials: true // if you send cookies or authorization headers
+}));
 
 const app = express();
 app.use(express.json());
