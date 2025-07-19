@@ -27,7 +27,7 @@ const readocassiondata = async (req, res) => {
         return res.status(200).json({ status: true, data: { message: "product read successfully", data: ocasssiondata } });
     } catch (error) {
         console.log(error);
-        return res.status(500).json({ status: false, data: { message: 'Internal server error.' }, data: error });
+        return res.status(500).json({ status: false, data: { message: 'Internal server error.', data: error } });
     }
 }
 const updateocassion = async (req, res) => {
@@ -44,7 +44,7 @@ const updateocassion = async (req, res) => {
         return res.status(200).json({ status: true, data: { message: " ocassion updated successfully" } });
     } catch (error) {
         console.log(error);
-        return res.status(500).json({ status: false, data: { message: 'Internal server error.' }, data: error });
+        return res.status(500).json({ status: false, data: { message: 'Internal server error.', data: error } });
     }
 
 }
@@ -94,4 +94,4 @@ const getocassionwithproductcount = async (req, res) => {
     }
 }
 
-module.exports = { addocasssion,readocassiondata,deleteocassion,getocassionwithproductcount,updateocassion };
+module.exports = { addocasssion, readocassiondata, deleteocassion, getocassionwithproductcount, updateocassion };
