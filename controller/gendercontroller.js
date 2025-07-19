@@ -27,7 +27,7 @@ const readgenderdata = async (req, res) => {
         return res.status(200).json({ status: true, data: { message: "product read successfully", data: genderdata } });
     }
     catch (error) {
-         return res.status(500).json({ status: false, data: { message: 'Internal server error.' }, data: error });
+          return res.status(500).json({ status: false, data: { message: 'Internal server error.' , data: error }});
     }
 
 }

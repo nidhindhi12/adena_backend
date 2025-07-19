@@ -26,7 +26,7 @@ const readcategory = async (req, res) => {
 
         return res.status(200).json({ status: true, data: { message: "category read successfully", data: categorydata } });
     } catch (error) {
-        return res.status(500).json({ status: false, data: { message: 'Internal server error.' }, data: error });
+         return res.status(500).json({ status: false, data: { message: 'Internal server error.' , data: error }});
     }
 
 }
@@ -44,7 +44,7 @@ const updatecategory = async (req, res) => {
         return res.status(200).json({ status: true, data: { message: " category updated successfully" } });
     } catch (error) {
         console.log(error);
-        return res.status(500).json({ status: false, data: { message: 'Internal server error.' }, data: error });
+        return res.status(500).json({ status: false, data: { message: 'Internal server error.' , data: error }});
     }
 
 }

@@ -85,7 +85,7 @@ const readalluser = async (req, res) => {
         }
         return res.status(200).json({ status: true, data: { message: "category read successfully", data: userdata } })
     } catch (error) {
-        return res.status(500).json({ status: false, data: { message: 'Internal server error.' }, data: error });
+        return res.status(500).json({ status: false, data: { message: 'Internal server error.' , data: error }});
     }
 }
 const updateuser = async (req, res) => {
@@ -104,7 +104,7 @@ const updateuser = async (req, res) => {
     } catch (error) {
         console.log(error);
         console.log(error);
-        return res.status(500).json({ status: false, data: { message: 'Internal server error.' }, data: error });
+        return res.status(500).json({ status: false, data: { message: 'Internal server error.' , data: error }});
     }
 
 }
