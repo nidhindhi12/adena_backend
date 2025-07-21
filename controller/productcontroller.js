@@ -76,7 +76,7 @@ const readproducts = async (req, res) => {
             {
                 $lookup: {
                     from: 'categories',
-                    Field: "category",
+                    localField: "category",
                     foreignField: "_id",
                     as: 'categoryInfo'
 
@@ -86,7 +86,7 @@ const readproducts = async (req, res) => {
             {
                 $lookup: {
                     from: 'genders',
-                    Field: "gender",
+                    localField: "gender",
                     foreignField: "_id",
                     as: "genderInfo"
                 }
@@ -95,7 +95,7 @@ const readproducts = async (req, res) => {
             {
                 $lookup: {
                     from: 'metals',
-                    Field: "metal",
+                    localField: "metal",
                     foreignField: "_id",
                     as: "metalInfo"
                 }
@@ -104,7 +104,7 @@ const readproducts = async (req, res) => {
             {
                 $lookup: {
                     from: "ocassions",
-                    Field: "ocassion",
+                    localField: "ocassion",
                     foreignField: "_id",
                     as: "ocassionInfo"
                 }
